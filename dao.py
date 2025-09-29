@@ -1,5 +1,5 @@
 import sqlite3
-from typing import List
+from typing import List, Optional
 from models import Item
 
 DB_PATH = "items.db"
@@ -27,9 +27,6 @@ class ItemDAO:
         conn.close()
 
     def adicionar(self, item: Item) -> Item:
-        """
-        Adiciona Item ao banco e retorna o Item com id preenchido.
-        """
         conn = self._connect()
         cur = conn.cursor()
         cur.execute(
@@ -44,7 +41,7 @@ class ItemDAO:
     def listarTodos(self) -> List[Item]:
         conn = self._connect()
         cur = conn.cursor()
-        cur.execute("SELECT id, nome, descricao, quantidade FROM items ORDER BY id")
+        cur.execute("SELECT id, nome, descricao, quantidade FROM items")
         rows = cur.fetchall()
         conn.close()
         return [Item(id=row[0], nome=row[1], descricao=row[2], quantidade=row[3]) for row in rows]
