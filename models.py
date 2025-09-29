@@ -3,7 +3,7 @@ from typing import Optional
 
 @dataclass
 class Item:
-    id: Optional[int]  # None antes de persistir
+    id: Optional[int]
     nome: str
     descricao: str
     quantidade: int
