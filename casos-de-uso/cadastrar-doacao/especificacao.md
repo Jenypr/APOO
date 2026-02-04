@@ -1,29 +1,32 @@
 # Caso de Uso: Cadastrar Doação
 
-## **Atores Envolvidos**
-- **Doador**
-- **Administrador**
+## Atores Envolvidos
+- Doador
 
 ---
 
-## **Pré-condições**
-- O doador deve estar logado no sistema.  
-- O doador deve ter pelo menos 18 anos.
+## Pré-condições
+- O doador deve estar autenticado no sistema.
 
 ---
 
-## **Pós-condições**
-- O produto doado deve aparecer para o administrador como uma opção a ser aceita e posteriormente reciclada.  
-- Caso o administrador aceite a doação, o produto passa a constar como **apto à reciclagem**.
+## Pós-condições
+- A proposta de doação é registrada no sistema com status **Pendente**.
 
 ---
 
-## **Fluxo Principal**
-1. O doador informa o seu CPF, a descrição, o tipo e a quantidade da doação.
-2. O sistema verifica os dados fornecidos.
-3. O administrador confirma a proposta de doação.
+## Fluxo Principal
+1. O doador informa os dados da doação (descrição, tipo e quantidade).  
+2. O sistema valida os dados informados.  
+3. O sistema registra a doação com status **Pendente**.  
+4. O sistema exibe uma mensagem de confirmação ao doador.
 
 ---
 
-## **Fluxo de Exceção (2)**
-- **2a.** Se alguma informação não for preenchida ou o CPF do doador estiver incorreto, o sistema solicita a correção dos dados.
+## Fluxo de Exceção – Dados inválidos
+- **2a.** Se algum campo obrigatório não for preenchido ou houver dados inválidos, o sistema solicita a correção das informações.
+
+---
+
+## Observação
+A confirmação da doação pelo administrador é tratada em um caso de uso separado: **Confirmar Doação**.
