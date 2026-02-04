@@ -1,4 +1,4 @@
-# Caso de Uso: Visualizar Doação
+# Caso de Uso: Cadastrar Doação
 
 ## **Atores Envolvidos**
 - **Doador**
