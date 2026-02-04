@@ -1,4 +1,4 @@
-# Caso de Uso: Propor Doação
+# Caso de Uso: Cadastrar Doação
 
 ## **Atores Envolvidos**
 - **Doador**
